@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="tab-ikon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Lesson 49</title>
+</head>
+
+<body>
+    <div>
+        <h1>Форма заявки на роботу в зоопарке</h1>
+        <p>
+            Пожалуйста заполните форму. Обязательные поля помечены *
+        </p>
+    </div>
+    <form name="Заявление на роботу">
+        <fieldset>
+            <legend>
+                <h3>Контактная информация</h3>
+            </legend>
+            <div class="label">
+                <label>
+                    Имя <span class="span">*</span>
+                    <input type="text" required>
+                </label>
+            </div>
+            <div class="label">
+                <label>
+                    Телефон 
+                    <input type="tel" placeholder="+74232497777">
+                </label>
+            </div>
+            <div class="label">
+                <label>
+                    Email <span class="span">*</span>
+                    <input type="email" required>
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h3>Персональная информация</h3>
+            </legend>
+            <div class="label">
+                <label>
+                    Возраст <span class="span">*</span>
+                    <input type="number" min="18" max="50">
+                </label>
+            </div>
+            <div class="label">
+                <label for="#block">
+                    Пол
+                </label>
+                <select name="Пол" id="block">
+                    <option value="">-- Не знаю --</option>
+                    <option value="men">Мужчина</option>
+                    <option value="women">Женщина</option>
+                    <option value="50/50">Другое</option>
+                </select>
+            </div>
+            <div class="label">
+                <label class="line">
+                    <div class="width">Перечислите личные качества</div>
+                    <textarea name="line"></textarea>
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h3>Выберите ваших любимых животных</h3>
+                <label>
+                    Зебра
+                    <input type="checkbox">
+                </label>
+                <label>
+                    Кот
+                    <input type="checkbox">
+                </label>
+                <label>
+                    Анаконда
+                    <input type="checkbox">
+                </label>
+                <label>
+                    Слон
+                    <input type="checkbox">
+                </label>
+                <label>
+                    Ленивиц
+                    <input type="checkbox">
+                </label>
+                <label>
+                    Баран
+                    <input type="checkbox">
+                </label>
+                <label>
+                    Верблюд
+                    <input type="checkbox">
+                </label>
+                <label>
+                    Енот
+                    <input type="checkbox">
+                </label>
+            </legend>
+        </fieldset>
+    </form>
+</body>
+
+
+</html>
