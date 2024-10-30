@@ -1,0 +1,33 @@
+.container {
+  margin: 30px auto auto 300px;
+}
+
+.block__content {
+  display: inline-flex;
+}
+
+.red, .green, .blueviolet {
+  width: 150px;
+  height: 150px;
+}
+
+.red {
+  background: red;
+  transform: translate(590px, 455px);
+}
+
+.green {
+  background: green;
+  transform: translate(200%) rotate(115deg);
+}
+
+.blueviolet {
+  background-image: linear-gradient(135deg, #540094, #9f24dd);
+  transform:translate(780px, -220px) scale(2) rotate(180deg);
+}
+
+.block__square {
+  width: 850px;
+  height: 600px;
+  border: 5px dashed #4b4a4a;
+}
