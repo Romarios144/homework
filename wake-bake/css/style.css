@@ -18,6 +18,7 @@
 .body--opened-menu {
     overflow: hidden;
 }
+
 .body--opened-modal {
     overflow: hidden;
 }
@@ -30,6 +31,13 @@
     flex-direction: column;
 }
 
+.container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
 .main {
     flex-grow: 1;
 }
@@ -38,11 +46,8 @@
     padding: 140px 0;
 }
 
-.container {
-    max-width: 1310px;
-    margin: 0 auto;
-    padding: 0 15px;
-    height: 100%;
+.main__program {
+    margin-bottom: 140px;
 }
 
 .button {
@@ -93,23 +98,28 @@
     padding: 0 60px 60px;
     max-width: 428px;
 }
+
 .modal__cancel {
     position: absolute;
     top: 20px;
     right: 20px;
 }
+
 .modal__cancel path,
 .modal__cancel rect {
     transition: var(--transition);
 }
+
 .modal__cancel:hover path,
 .modal__cancel:hover rect {
     stroke: #AC907A;
 }
+
 .modal__img {
     margin: -65px 0 15px 13px;
     max-width: 100%;
 }
+
 .modal__title {
     font-family: 'Gabriola';
     font-size: 42px;
@@ -117,6 +127,7 @@
     color: var(--accent-text);
     margin-bottom: 10px;
 }
+
 .modal__text {
     margin-bottom: 30px;
 }
@@ -129,6 +140,7 @@
     position: relative;
     display: block;
 }
+
 .field span {
     position: absolute;
     top: 12px;
@@ -140,6 +152,7 @@
     visibility: hidden;
     transition: var(--transition);
 }
+
 .field__input {
     display: block;
     width: 100%;
@@ -150,20 +163,25 @@
     font-size: 16px;
     transition: var(--transition);
 }
+
 .field__input:hover {
     border-color: var(--accent-color);
 }
+
 .field__input::placeholder {
     color: #AC907A;
     transition: var(--transition);
 }
+
 .field__input:hover::placeholder {
     color: var(--accent-color);
 }
+
 .field__input:focus {
     padding: 26px 42px 12px 28px;
 }
-.field__input:focus + span {
+
+.field__input:focus+span {
     opacity: 1;
     visibility: visible;
 }
@@ -509,8 +527,117 @@
 
 
 
+.program__top {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
 
+.program__title {
+    color: var(--accent-text);
+    font-family: Gabriola;
+    font-size: 74px;
+    line-height: 0.82;
+    padding-bottom: 20px;
+}
 
+.tab-controls {
+    display: flex;
+    gap: 26px;
+}
+
+.tab-controls__link {
+    display: block;
+    padding: 14px 30px;
+    border-radius: 100px;
+    background: #fff9f4;
+    box-shadow: 0px 4px 20px 0px #cec3b94d;
+    margin: 10px 0;
+    transition: var(--transition);
+}
+
+.tab-controls__link:hover {
+    background: #ffe0cb;
+}
+
+.tab-controls__link--activ {
+    background: #ffe0cb;
+    box-shadow: 0px 4px 20px 0px #cec3b900;
+}
+
+.tab-content {
+
+    display: none;
+}
+
+.tab-content--show {
+    display: block;
+}
+
+.accordion-list {
+}
+
+.accordion-list__item {
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+}
+
+.accordion-list__item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-list__item--opened {}
+
+.accordion-list__control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 41px 30px;
+    width: 100%;
+    background: transparent;
+
+    color: var(--general-text);
+    font-family: Gabriola;
+    font-size: 42px;
+    line-height: 0.90;
+}
+
+.accordion-list__control-title {}
+
+.accordion-list__control__icon {}
+
+.accordion-list__content {}
+
+.accordion-content {
+    display: flex;
+    gap: 80px;
+    padding: 0 30px 40px;
+}
+
+.accordion-content__col {}
+
+.accordion-content__title {
+    color: #ceaad0;
+    line-height: 1.6;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.accordion-content__list {}
+
+.accordion-content__item {
+    margin-bottom: 20px;
+}
+
+.accordion-content__item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-content__icon {}
+
+.accordion-content__text {}
 
 
 
@@ -670,9 +797,11 @@
     .about__img {
         grid-row: auto;
     }
+
     .about__body {
         align-self: center;
     }
+
     .about__grid {
         grid-column: 1/-1;
     }
@@ -819,9 +948,11 @@
         width: 50%;
         margin-top: -45px;
     }
+
     .modal__title {
         font-size: 35px;
     }
+
     .modal__window {
         padding: 0 15px 45px;
     }
