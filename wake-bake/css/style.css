@@ -567,7 +567,6 @@
 }
 
 .tab-content {
-
     display: none;
 }
 
@@ -575,8 +574,7 @@
     display: block;
 }
 
-.accordion-list {
-}
+.accordion-list {}
 
 .accordion-list__item {
     border: 1px solid var(--accent-color);
@@ -606,9 +604,50 @@
 
 .accordion-list__control-title {}
 
-.accordion-list__control__icon {}
+.accordion-list__control__icon {
+    border: 1.5px solid var(--accent-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.accordion-list__content {}
+    transition: var(--transition);
+}
+
+.accordion-list__control__icon svg {
+    margin-left: 4px;
+}
+
+.accordion-list__control__icon path {
+    transition: var(--transition);
+}
+
+.accordion-list__control:hover .accordion-list__control__icon {
+    transform: rotate(90deg);
+    background: var(--accent-color);
+}
+
+.accordion-list__control:hover .accordion-list__control__icon path {
+    fill: var(--general-bg);
+}
+
+.accordion-list__item--opened .accordion-list__control__icon {
+    transform: rotate(90deg);
+    background: var(--accent-color);
+}
+
+.accordion-list__item--opened .accordion-list__control__icon path {
+    fill: var(--general-bg);
+}
+
+
+.accordion-list__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
 
 .accordion-content {
     display: flex;
@@ -616,7 +655,10 @@
     padding: 0 30px 40px;
 }
 
-.accordion-content__col {}
+.accordion-content__col:first-child {
+    max-width: 507px;
+    width: 100%;
+}
 
 .accordion-content__title {
     color: #ceaad0;
@@ -628,6 +670,7 @@
 .accordion-content__list {}
 
 .accordion-content__item {
+    display: flex;
     margin-bottom: 20px;
 }
 
@@ -635,9 +678,22 @@
     margin-bottom: 0;
 }
 
-.accordion-content__icon {}
+.accordion-content__icon {
+    border: 1px solid #ceaad0;
+    padding: 8px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 8px;
+}
 
-.accordion-content__text {}
+.accordion-content__text {
+    max-width: 240px;
+}
+
+
 
 
 
