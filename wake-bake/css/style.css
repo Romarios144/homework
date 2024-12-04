@@ -561,7 +561,7 @@
     background: #ffe0cb;
 }
 
-.tab-controls__link--activ {
+.tab-controls__link--active {
     background: #ffe0cb;
     box-shadow: 0px 4px 20px 0px #cec3b900;
 }
