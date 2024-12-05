@@ -121,7 +121,7 @@
 }
 
 .modal__title {
-    font-family: 'Gabriola';
+    font-family: "Gabriola";
     font-size: 42px;
     line-height: .9;
     color: var(--accent-text);
@@ -536,15 +536,12 @@
 
 .program__title {
     color: var(--accent-text);
-    font-family: Gabriola;
+    font-family: "Gabriola";
     font-size: 74px;
     line-height: 0.82;
     padding-bottom: 20px;
 }
 
-
-
-.program__button {}
 
 .program__action {
     display: flex;
@@ -602,9 +599,6 @@
     color: var(--general-text);
 }
 
-
-.program__price {}
-
 .program__price-text {
     color: #ceaad0;
     line-height: 1.6;
@@ -620,8 +614,6 @@
 .program__price-value--big {
     font-size: 49px;
 }
-
-.button {}
 
 .program__action--button {
     grid-column: 1/-1;
@@ -669,8 +661,6 @@
     display: block;
 }
 
-.accordion-list {}
-
 .accordion-list__item {
     border: 1px solid var(--accent-color);
     border-radius: var(--border-radius);
@@ -681,8 +671,6 @@
     margin-bottom: 0;
 }
 
-.accordion-list__item--opened {}
-
 .accordion-list__control {
     display: flex;
     align-items: center;
@@ -692,12 +680,10 @@
     background: transparent;
 
     color: var(--general-text);
-    font-family: Gabriola;
+    font-family: "Gabriola";
     font-size: 42px;
     line-height: 0.90;
 }
-
-.accordion-list__control-title {}
 
 .accordion-list__control__icon {
     border: 1.5px solid var(--accent-color);
@@ -761,8 +747,6 @@
     text-transform: uppercase;
     margin-bottom: 20px;
 }
-
-.accordion-content__list {}
 
 .accordion-content__item {
     display: flex;
