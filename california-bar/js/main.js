@@ -1,22 +1,25 @@
 // Initialize Swiper 
 
+new Swiper('.gallery__swiper', {
 
-var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
   slidesPerView: 3,
-  spaceBetween: 30, 
+
+
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+      nextEl: '.gallery__next',
+      prevEl: '.gallery__prev',
   },
-  loop: false,
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 15,
-    },
-    480: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
-  },
+
+  // breakpoints: {
+  //     601: {
+  //         slidesPerView: 3,
+  //     },
+  //     801: {
+  //         spaceBetween: 32,
+  //     },
+  //     1101: {
+  //         slidesPerView: 4,
+  //     }
+  // }
 });
