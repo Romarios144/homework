@@ -18,7 +18,8 @@
     0px 0px 20px #FF26C2,
     0px 0px 25px #F32E7C,
     0px 0px 25px #F32E7C,
-    0px 0px 35px #F32E7C,
+    0px 0px 15px #F32E7C,
+    0px 0px 10px #F32E7C,
     0px 0px 35px #F32E7C;
   ;
 }
@@ -88,7 +89,7 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 19px;
+  bottom: 0;
   height: 2px;
   width: 0;
   background-color: var(--accent-text);
@@ -116,6 +117,7 @@ body {
   position: relative;
   background: url('../img/decor/header-bg.jpeg') center/cover no-repeat;
   width: 100%;
+  max-height: 980px;
   height: 51vw;
   margin: 0;
   overflow: hidden;
@@ -139,6 +141,8 @@ body {
   max-width: 645px;
   z-index: 5;
 }
+
+.gallery__info {}
 
 .greetings__inner-title {
   position: relative;
@@ -185,15 +189,37 @@ body {
 /* =================================================================== */
 /* =================================================================== */
 
-.main__events {}
 
-.events {
+.main__gallery {}
+
+.gallery {}
+
+.gallery__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 140px 0;
+  position: relative;
 }
 
-.events__inner {}
+.gallery__img {
+  position: absolute;
+  z-index: 2;
+  top: 27%;
+  left: -19.5%;
+  max-width: 287px;
+  max-height: 246px;
+}
 
-.events__title {
+.gallery__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery__title {
   text-align: center;
   color: var(--general-bg);
   font-family: "Lumberjack";
@@ -201,21 +227,16 @@ body {
   line-height: 76px;
   -webkit-text-stroke: var(--stroke);
   text-shadow: var(--text-shadow);
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
+
 
 .swiper {
   width: 100%;
   height: 100%;
 }
 
-
-
-.swiper-wrapper {
-  display: flex;
-  gap: 15px;
-}
-
+.swiper-wrapper {}
 
 .swiper-slide {
   max-width: 410px;
@@ -261,9 +282,152 @@ body {
   padding: 0 5px 26px 15px;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  position: absolute;
-  top: 62%;
-  color: var(--accent-text);
+.gallery__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 600px;
+}
+
+.gallery__next,
+.gallery__prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid var(--general-bg);
+  border-radius: 50%;
+}
+
+.gallery__prev path,
+.gallery__next path {
+  fill: var(--accent-text);
+}
+
+.gallery__prev svg,
+.gallery__next svg {
+  width: 30px;
+  height: 30px;
+}
+
+.gallery__next:hover,
+.gallery__prev:hover {
+  border: 1.5px solid var(--accent-text);
+  box-shadow:
+    0px 0px 5px #FB37FF,
+    0px 0px 7px #FB37FF,
+    0px 0px 10px #FF26C2,
+    0px 0px 15px #F32E7C,
+    0px 0px 20px #F32E7C;
+  ;
+}
+
+
+.swiper-button-disabled.gallery__next,
+.swiper-button-disabled.gallery__prev {
+  opacity: .3;
+}
+
+.swiper-button-disabled.gallery__next,
+.swiper-button-disabled.gallery__prev {
+  border: none;
+  pointer-events: none;
+  cursor: default;
+  box-shadow: none;
+}
+
+
+/* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
+
+@media (max-width: 1440px) {
+  .greetings {
+    height: 52vw;
+  }
+
+  .greetings__inner {
+    margin-top: 155px;
+  }
+
+  /* ------------------------------- */
+
+  .gallery__inner {
+    padding: 100px 0;
+  }
+
+  .gallery__info {
+    display: flex;
+    gap: 110px;
+    margin-left: -180px;
+  }
+
+  .gallery__img {
+    position: relative;
+    top: 0;
+    left: 7%;
+    margin-top: 14px;
+  }
+
+  .gallery__img img {
+    max-width: 115px;
+    max-height: 99px;
+    transform: rotate(90deg);
+  }
+
+  /* ------------------------------- */
+
+}
+
+@media (max-width: 1024px) {
+  .greetings {
+    height: 54vw;
+  }
+
+  .greetings__inner {
+    margin-top: 101px;
+  }
+
+  .greetings__inner-tetx {
+    line-height: 47px;
+  }
+
+  /* --------------------------------- */
+
+  .gallery__inner {
+    padding: 90px 0 60px;
+  }
+
+  .gallery__info {
+    margin-left: 0;
+  }
+
+  .gallery__img {
+    display: none;
+  }
+
+  .swiper-slide img {
+    height: 315px;
+}
+
+  .swiper__text {
+    font-size: 18px;
+    line-height: 21px;
+}
+}
+
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 320px) {
+
 }
