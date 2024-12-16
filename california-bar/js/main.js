@@ -2,8 +2,8 @@
 
 new Swiper('.gallery__swiper', {
 
-  spaceBetween: 30,
-  slidesPerView: 3,
+  spaceBetween: 15,
+  slidesPerView: 2,
 
 
   navigation: {
@@ -11,15 +11,14 @@ new Swiper('.gallery__swiper', {
       prevEl: '.gallery__prev',
   },
 
-  // breakpoints: {
-  //     601: {
-  //         slidesPerView: 3,
-  //     },
-  //     801: {
-  //         spaceBetween: 32,
-  //     },
-  //     1101: {
-  //         slidesPerView: 4,
-  //     }
-  // }
+  breakpoints: {
+    769: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+  }
 });
