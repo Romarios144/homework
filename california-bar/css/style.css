@@ -541,7 +541,12 @@ body {
   .swiper__title {
     font-size: 20px;
     line-height: 26px;
+    margin: 12px 0;
   }
+
+  .swiper__date {
+    margin: -8px 20px 10px 0;
+}
 
   .swiper__text {
     font-size: 16px;
